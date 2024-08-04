@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Coffee Shop</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style.css"><br><br><br><br><br><br><br><br><br><br>
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" class="logo">
+            <img src="logo.gif" alt="Logo">
+        </a>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="menu.html">Menu</a>
+            <a href="products.html">Products</a>
+            <a href="review.html">Review</a>
+            <a href="blogs.html">Blogs</a>
+            <a href="contact.html">Contact</a>
+            <a href="registration.html">Registration</a>
+            <a href="login.html">Login</a>
+        </nav>
+        <div class="icons">
+            <span class="fas fa-search" id="search-btn"></span>
+            <span class="fas fa-shopping-cart" id="cart-btn"></span>
+            <span class="fas fa-bars" id="menu-btn"></span>
+        </div>
+        <div class="search-form">
+            <input type="search" id="search-box" placeholder="Search here...">
+            <label for="search-box" class="fas fa-search"></label>
+        </div>
+        <div class="cart-items-container" id="cart-items-container">
+            <a href="#" class="btn">Checkout Now</a>
+        </div>
+    </header>
+
+    <section class="menu" id="menu">
+        <h1 class="heading">Our <span>Menu</span></h1>
+        <div class="box-container">
+            <div class="box" data-id="1" data-name="Expresso" data-price="213.15">
+                <img src="menu1.jpeg" alt="">
+                <h3>Expresso</h3>
+                <div class="price">₹213.15 <span>₹20.99</span></div>
+                <a href="#" class="btn add-to-cart">Add to Cart</a>
+            </div>
+            <div class="box" data-id="2" data-name="StarBucks" data-price="1011.15">
+                <img src="menu2.jpeg" alt="">
+                <h3>StarBucks</h3>
+                <div class="price">₹1011.15 <span>₹10.92</span></div>
+                <a href="#" class="btn add-to-cart">Add to Cart</a>
+            </div>
+            <div class="box" data-id="3" data-name="Capaccino" data-price="200.15">
+                <img src="menu3.jpeg" alt="">
+                <h3>Capaccino</h3>
+                <div class="price">₹200.15 <span>₹0.99</span></div>
+                <a href="#" class="btn add-to-cart">Add to Cart</a>
+            </div>
+            <div class="box" data-id="4" data-name="Cold Coffee" data-price="499.15">
+                <img src="menu4.jpeg" alt="">
+                <h3>Cold Coffee</h3>
+                <div class="price">₹499.15 <span>₹20.99</span></div>
+                <a href="#" class="btn add-to-cart">Add to Cart</a>
+            </div>
+            <div class="box" data-id="5" data-name="Lattee Coffee" data-price="243.15">
+                <img src="menu5.jpeg" alt="">
+                <h3>Lattee Coffee</h3>
+                <div class="price">₹243.15 <span>₹20.99</span></div>
+                <a href="#" class="btn add-to-cart">Add to Cart</a>
+            </div>
+            <div class="box" data-id="6" data-name="BRU" data-price="113.15">
+                <img src="menu6.jpeg" alt="">
+                <h3>BRU</h3>
+                <div class="price">₹113.15 <span>₹09.99</span></div>
+                <a href="#" class="btn add-to-cart">Add to Cart</a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.querySelector('#menu-btn').onclick = () => {
+            document.querySelector('.navbar').classList.toggle('active');
+        };
+
+        document.querySelector('#search-btn').onclick = () => {
+            document.querySelector('.search-form').classList.toggle('active');
+        };
+
+        document.querySelector('#cart-btn').onclick = () => {
+            document.querySelector('.cart-items-container').classList.toggle('active');
+        };
+
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+            button.onclick = (e) => {
+                e.preventDefault();
+                const product = button.closest('.box');
+                const productId = product.getAttribute('data-id');
+                const productName = product.getAttribute('data-name');
+                const productPrice = product.getAttribute('data-price');
+                const productImage = product.querySelector('img').src;
+
+                addItemToCart(productId, productName, productPrice, productImage);
+                displayCartItems();
+            };
+        });
+
+        function addItemToCart(id, name, price, image) {
+            const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+            const itemIndex = cartItems.findIndex(item => item.id === id);
+
+            if (itemIndex === -1) {
+                cartItems.push({ id, name, price, image, quantity: 1 });
+            } else {
+                cartItems[itemIndex].quantity += 1;
+            }
+
+            localStorage.setItem('cartItems', JSON.stringify(cartItems));
+        }
+
+        function displayCartItems() {
+            const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+            const cartItemsContainer = document.getElementById('cart-items-container');
+            cartItemsContainer.innerHTML = ''; // Clear previous items
+
+            cartItems.forEach(item => {
+                const itemElement = document.createElement('div');
+                itemElement.className = 'cart-item';
+
+                itemElement.innerHTML = `
+                    <span class="fas fa-times" data-id="${item.id}"></span>
+                    <img src="${item.image}" alt="${item.name}">
+                    <div class="content">
+                        <h3>${item.name}</h3>
+                        <div class="price">₹${item.price} /-</div>
+                        <div class="quantity">Quantity: ${item.quantity}</div>
+                    </div>
+                `;
+
+                cartItemsContainer.insertBefore(itemElement, cartItemsContainer.firstChild);
+            });
+            document.querySelectorAll('.cart-item .fa-times').forEach(button => {
+                button.onclick = () => {
+                    const id = button.getAttribute('data-id');
+                    removeCartItem(id);
+                };
+            });
+        }
+
+        function removeCartItem(id) {
+            let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+            cartItems = cartItems.filter(item => item.id !== id);
+            localStorage.setItem('cartItems', JSON.stringify(cartItems));
+            displayCartItems();
+        }
+
+        displayCartItems();
+    </script>
+    <section class="footer">
+        <div class="shar">
+            <a href="https://www.facebook.com" class="fab fa-facebook-f" target="_blank"></a>
+            <a href="https://www.twitter.com" class="fab fa-twitter" target="_blank"></a>
+            <a href="https://www.linkedin.com" class="fab fa-linkedin" target="_blank"></a>
+            <a href="https://www.instagram.com" class="fab fa-instagram" target="_blank"></a>
+            <a href="https://www.whatsapp.com" class="fab fa-whatsapp" target="_blank"></a>
+            <a href="https://www.pinterest.com" class="fab fa-pinterest" target="_blank"></a>
+        </div>
+    </section>
+    <center style="background-color: antiquewhite;">
+        <footer>
+            <section>$copy Mycompany || All rights are reserved....</section>
+        </footer>
+    </center>
+</body>
+</html>

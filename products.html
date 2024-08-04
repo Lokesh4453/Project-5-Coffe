@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Coffee Shop</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style.css"><br><br><br><br><br><br><br><br><br><br>
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" class="logo">
+            <img src="logo.gif" alt="Logo">
+        </a>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="menu.html">Menu</a>
+            <a href="products.html">Products</a>
+            <a href="review.html">Review</a>
+            <a href="blogs.html">Blogs</a>
+            <a href="contact.html">Contact</a>
+            <a href="registration.html">Registration</a>
+            <a href="login.html">Login</a>
+        </nav>
+        <div class="icons">
+            <span class="fas fa-search" id="search-btn"></span>
+            <span class="fas fa-shopping-cart" id="cart-btn"></span>
+            <span class="fas fa-bars" id="menu-btn"></span>
+        </div>
+        <div class="search-form">
+            <input type="search" id="search-box" placeholder="Search here...">
+            <label for="search-box" class="fas fa-search"></label>
+        </div>
+        <div class="cart-items-container" id="cart-items-container">
+            <a href="#" class="btn">Checkout Now</a>
+        </div>
+    </header>
+    <section class="products" id="products">
+        <h1 class="heading">Our <span>Products</span></h1>
+        <div class="box-container">
+            <div class="box" data-id="1" data-name="Classic Coffee" data-price="150.99">
+                <div class="icons">
+                    <a href="#" class="fas fa-shopping-cart add-to-cart"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="product1.jpeg" alt="Classic Coffee">
+                </div>
+                <div class="content">
+                    <h3>Classic Coffee</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="price">₹150.99 <span>₹170.99</span></div>
+                    <a href="#" class="btn add-to-cart">Add to Cart</a>
+                </div>
+            </div>
+            <div class="box" data-id="3" data-name="nesCafe" data-price="315.09">
+                <div class="icons">
+                    <a href="#" class="fas fa-shopping-cart"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="product2.jpeg" alt="">
+                </div>
+                <div class="content">
+                    <h3>nesCafe</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="price">₹315.09 <span>₹230.13</span></div>
+                    <a href="#" class="btn add-to-cart">Add to Cart</a>
+                </div>
+            </div>
+            <div class="box" data-id="3" data-name="nesCafe" data-price="215.09">
+                <div class="icons">
+                    <a href="#" class="fas fa-shopping-cart"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="product3.jpeg" alt="">
+                </div>
+                <div class="content">
+                    <h3>nesCafe</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="price">₹215.09 <span>₹230.13</span></div>
+                    <a href="#" class="btn add-to-cart">Add to Cart</a>
+                </div>
+            </div>
+            <div class="box" data-id="4" data-name="Neocafe" data-price="170.99">
+                <div class="icons">
+                    <a href="#" class="fas fa-shopping-cart"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="product4.jpeg" alt="">
+                </div>
+                <div class="content">
+                    <h3>NoeCafe</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="price">₹170.99 <span>₹190.99</span></div>
+                    <a href="#" class="btn add-to-cart">Add to Cart</a>
+                </div>
+            </div>
+            <div class="box" data-id="5" data-name="Mysore Coffee" data-price="150.99">
+                <div class="icons">
+                    <a href="#" class="fas fa-shopping-cart"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="product5.jpeg" alt="">
+                </div>
+                <div class="content">
+                    <h3>Mysore Coffee</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="price">₹300.17 <span>₹350.19</span></div>
+                    <a href="#" class="btn add-to-cart">Add to Cart</a>
+                </div>
+            </div>
+            <div class="box" data-id="6" data-name="Cafe Desire" data-price="256.12">
+                <div class="icons">
+                    <a href="#" class="fas fa-shopping-cart"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="product6.jpeg" alt="">
+                </div>
+                <div class="content">
+                    <h3>cafe Desire</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="price">₹256.12 <span>₹285.11</span></div>
+                    <a href="#" class="btn add-to-cart">Add to Cart</a>
+                </div>
+            </div>
+            <div class="box" data-id="7" data-name="Organic Coffee" data-price="190.35">
+                <div class="icons">
+                    <a href="#" class="fas fa-shopping-cart"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="product7.jpeg" alt="">
+                </div>
+                <div class="content">
+                    <h3>Organic Coffee</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="price">₹190.35 <span>₹250.29</span></div>
+                    <a href="#" class="btn add-to-cart">Add to Cart</a>
+                </div>
+            </div>
+            <div class="box" data-id="8" data-name="BRU" data-price="200.23">
+                <div class="icons">
+                    <a href="#" class="fas fa-shopping-cart"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="product8.jpeg" alt="">
+                </div>
+                <div class="content">
+                    <h3>BRU</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="price">₹200.23 <span>₹245.76</span></div>
+                    <a href="#" class="btn add-to-cart">Add to Cart</a>
+                </div>
+            </div>
+            <div class="box" data-id="9" data-name="Sunrise" data-price="178.93">
+                <div class="icons">
+                    <a href="#" class="fas fa-shopping-cart"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="product9.jpeg" alt="">
+                </div>
+                <div class="content">
+                    <h3>Sunrise</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="price">₹178.93 <span>₹225.09</span></div>
+                    <a href="#" class="btn add-to-cart">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.querySelector('#menu-btn').onclick = () => {
+            document.querySelector('.navbar').classList.toggle('active');
+        };
+
+        document.querySelector('#search-btn').onclick = () => {
+            document.querySelector('.search-form').classList.toggle('active');
+        };
+
+        document.querySelector('#cart-btn').onclick = () => {
+            document.querySelector('.cart-items-container').classList.toggle('active');
+        };
+
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+            button.onclick = (e) => {
+                e.preventDefault();
+                const product = button.closest('.box');
+                const productId = product.getAttribute('data-id');
+                const productName = product.getAttribute('data-name');
+                const productPrice = product.getAttribute('data-price');
+                const productImage = product.querySelector('img').src;
+
+                addItemToCart(productId, productName, productPrice, productImage);
+                displayCartItems();
+            };
+        });
+
+        function addItemToCart(id, name, price, image) {
+            const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+            const itemIndex = cartItems.findIndex(item => item.id === id);
+
+            if (itemIndex === -1) {
+                cartItems.push({ id, name, price, image, quantity: 1 });
+            } else {
+                cartItems[itemIndex].quantity += 1;
+            }
+
+            localStorage.setItem('cartItems', JSON.stringify(cartItems));
+        }
+
+        function displayCartItems() {
+            const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+            const cartItemsContainer = document.getElementById('cart-items-container');
+            cartItemsContainer.innerHTML = ''; // Clear previous items
+
+            cartItems.forEach(item => {
+                const itemElement = document.createElement('div');
+                itemElement.className = 'cart-item';
+
+                itemElement.innerHTML = `
+                    <span class="fas fa-times" data-id="${item.id}"></span>
+                    <img src="${item.image}" alt="${item.name}">
+                    <div class="content">
+                        <h3>${item.name}</h3>
+                        <div class="price">₹${item.price} /-</div>
+                        <div class="quantity">Quantity: ${item.quantity}</div>
+                    </div>
+                `;
+
+                cartItemsContainer.insertBefore(itemElement, cartItemsContainer.firstChild);
+            });
+            document.querySelectorAll('.cart-item .fa-times').forEach(button => {
+                button.onclick = () => {
+                    const id = button.getAttribute('data-id');
+                    removeCartItem(id);
+                };
+            });
+        }
+
+        function removeCartItem(id) {
+            let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+            cartItems = cartItems.filter(item => item.id !== id);
+            localStorage.setItem('cartItems', JSON.stringify(cartItems));
+            displayCartItems();
+        }
+
+        displayCartItems();
+    </script>
+    <section class="footer">
+        <div class="shar">
+            <a href="https://www.facebook.com" class="fab fa-facebook-f" target="_blank"></a>
+            <a href="https://www.twitter.com" class="fab fa-twitter" target="_blank"></a>
+            <a href="https://www.linkedin.com" class="fab fa-linkedin" target="_blank"></a>
+            <a href="https://www.instagram.com" class="fab fa-instagram" target="_blank"></a>
+            <a href="https://www.whatsapp.com" class="fab fa-whatsapp" target="_blank"></a>
+            <a href="https://www.pinterest.com" class="fab fa-pinterest" target="_blank"></a>
+        </div>
+    </section>
+    <center style="background-color: antiquewhite;">
+    <footer>
+        <section>© Mycompany || All rights reserved....</section>
+    </footer>
+    </center>
+</body>
+</html>

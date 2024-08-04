@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Coffee Shop</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style.css"><br><br><br><br><br><br><br><br><br><br>
+</head>
+
+<body>
+    <form action="registration-success.html" method="get" class="registration-form">
+    <header class="header">
+        <a href="index.html" class="logo">
+            <img src="logo.gif" alt="Logo">
+        </a>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="menu.html">Menu</a>
+            <a href="products.html">Products</a>
+            <a href="review.html">Review</a>
+            <a href="blogs.html">Blogs</a>
+            <a href="contact.html">Contact</a>
+            <a href="registration.html">Registration</a>
+            <a href="login.html">Login</a>
+        </nav>
+        <div class="icons">
+            <span class="fas fa-search" id="search-btn"></span>
+            <span class="fas fa-shopping-cart" id="cart-btn"></span>
+            <span class="fas fa-bars" id="menu-btn"></span>
+        </div>
+        <div class="search-form">
+            <input type="search" id="search-box" placeholder="Search here...">
+            <label for="search-box" class="fas fa-search"></label>
+        </div>
+    </header>
+
+    <section class="registration" id="registration">
+        <h1 class="heading" style="text-decoration: grey;"> <span>Register Now</span></h1>
+        <form action="#" method="post" class="registration-form">
+            <div class="input-box">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+            </div>
+            <div class="input-box">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="input-box">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            </div>
+            <div class="input-box">
+                <label for="coffee-type">Favorite Coffee Type</label>
+                <select id="coffee-type" name="coffee-type" required>
+                    <option value="">Select your favorite coffee</option>
+                    <option value="espresso">Espresso</option>
+                    <option value="latte">Latte</option>
+                    <option value="cappuccino">Cappuccino</option>
+                    <option value="americano">Americano</option>
+                    <option value="mocha">Mocha</option>
+                </select>
+            </div>
+            <div class="input-box">
+                <label for="preferred-time">Preferred Time for Coffee</label>
+                <select id="preferred-time" name="preferred-time" required>
+                    <option value="">Select your preferred time</option>
+                    <option value="morning">Morning</option>
+                    <option value="afternoon">Afternoon</option>
+                    <option value="evening">Evening</option>
+                    <option value="night">Night</option>
+                </select>
+            </div>
+            <div class="input-box">
+                <label for="coffee-origin">Favorite Coffee Origin</label>
+                <select id="coffee-origin" name="coffee-origin" required>
+                    <option value="">Select your favorite coffee origin</option>
+                    <option value="ethiopia">Ethiopia</option>
+                    <option value="brazil">Brazil</option>
+                    <option value="colombia">Colombia</option>
+                    <option value="vietnam">Vietnam</option>
+                    <option value="indonesia">Indonesia</option>
+                </select>
+            </div>
+            <div class="input-box">
+                <label for="roast-preference">Roast Preference</label>
+                <select id="roast-preference" name="roast-preference" required>
+                    <option value="">Select your roast preference</option>
+                    <option value="light">Light</option>
+                    <option value="medium">Medium</option>
+                    <option value="dark">Dark</option>
+                </select>
+            </div>
+            <div class="input-box">
+                <label for="notes">Additional Notes</label>
+                <textarea id="notes" name="notes" placeholder="Enter any additional notes or preferences" rows="4"></textarea>
+            </div>
+            <div class="input-box">
+                <button type="submit" class="btn">Register</button>
+            </div>
+        </form>
+    </section>
+    <section class="footer">
+        <div class="shar">
+            <a href="https://www.facebook.com" class="fab fa-facebook-f" target="_blank"></a>
+            <a href="https://www.twitter.com" class="fab fa-twitter" target="_blank"></a>
+            <a href="https://www.linkedin.com" class="fab fa-linkedin" target="_blank"></a>
+            <a href="https://www.instagram.com" class="fab fa-instagram" target="_blank"></a>
+            <a href="https://www.whatsapp.com" class="fab fa-whatsapp" target="_blank"></a>
+            <a href="https://www.pinterest.com" class="fab fa-pinterest" target="_blank"></a>
+        </div>
+    </section>
+    <center style="background-color: antiquewhite;">
+    <footer>
+        <section>$copy Mycompany || All rights are reserved....</section>
+    </footer>
+    </center>
+    </form>
+</body>
+</html>
